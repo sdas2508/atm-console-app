@@ -57,10 +57,10 @@ class withdrawl{
 	public void withdraw(int amount, ATM user) {
 		if (user.getAcBalance() >= amount) {
 			user.setAcBalance(user.getAcBalance() - amount);
-			System.out.println("✅ Withdrawal Successful.");
-			System.out.println("💰 Remaining Balance: " + user.getAcBalance());
+			System.out.println("Withdrawal Successful.");
+			System.out.println("Remaining Balance: " + user.getAcBalance());
 		} else {
-			System.out.println("❌ Insufficient Balance.");
+			System.out.println("Insufficient Balance.");
 		}
 	}
 }
@@ -73,13 +73,13 @@ class balanceEnquiry{
 class depositMoney{
 	public void deposit(int amount, ATM user) {
 		user.setAcBalance(user.getAcBalance() + amount);
-		System.out.println("✅ Deposit Successful.");
-		System.out.println("💰 Total Balance: " + user.getAcBalance());
+		System.out.println(" Deposit Successful.");
+		System.out.println(" Total Balance: " + user.getAcBalance());
 	}
 }
 class exit{
 	public void display2() {
-		System.out.println("👋 Thank you for using the ATM. Goodbye!");
+		System.out.println("Thank you for using the ATM. Goodbye!");
 	}
 }
 public class AtmMachineLogic {
@@ -93,7 +93,7 @@ public class AtmMachineLogic {
 	        checkPassword p1 = new checkPassword();
 
 	        if (p1.isValidate(inputPassword, user1)) {
-	            System.out.println("\n✅ Welcome, " + user1.getName() + "!");
+	            System.out.println("\n Welcome, " + user1.getName() + "!");
 	            System.out.println("1. Balance Enquiry\n2. Withdraw Money\n3. Deposit Money\n4. Exit");
 	            System.out.print("Select an Option: ");
 	            int choice = sc.nextInt();
